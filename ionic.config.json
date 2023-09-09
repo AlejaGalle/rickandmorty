@@ -1,0 +1,7 @@
+{
+  "name": "rick-and-moorty-app",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
