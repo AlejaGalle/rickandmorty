@@ -1,6 +1,38 @@
 .version{  font-size: 14px;
 }
 ion-avatar{   --border-radius: 10px; 
-       width: 100%;   height: 100%;}.name{    font-size: 1.5em;   font-weight: bold;}
-
+       width: 100%;   height: 100%;}
        
+.name{    font-size: 1.5em;   font-weight: bold;}
+
+ion-card:hover{
+       cursor: pointer;
+       background: rgba(7,7,7,0.5);
+}
+
+ion-searchbar {
+       --background: rgba(7,7,7,0.2);
+       max-width:350px;
+       color:white
+}
+
+
+
+ion-item ion-select {
+       --border-color: #007aff;
+       --background: rgba(7, 7, 7, 0.2);
+        color: white;
+     }
+     
+     ion-select-option {
+        color: #333;
+     }
+     
+     ion-select::part(placeholder) {
+        color: #999;
+     }
+     
+     ion-select::part(icon) {
+       color: #007aff;
+     }
+     

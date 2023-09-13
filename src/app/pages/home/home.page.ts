@@ -8,7 +8,11 @@ import { RickAndMortyService } from 'src/app/services/rick-and-morty.service';
 })
 export class HomePage implements OnInit {
   characters:any[] = [];
-  params={} as any;
+  params: any = {
+    page: 0,
+    name: '', 
+    status: '', 
+  };
 
   constructor(private rymSvc: RickAndMortyService) { }
 
@@ -34,11 +38,34 @@ export class HomePage implements OnInit {
          }
 
         console.log(err)
-      }
+      },
   });
 
 
  }
+
+
+   searchCharacters() {
+    this.params.page =1;
+    this.rymSvc.getCharacters(this.params).subscribe({
+      next: (respuesta: any)=>{
+      this.characters=respuesta.results;
+      
+      },
+    error:(err: any)=> {
+      
+    },
+  });
+
+ }
+
+ filterByStatus(status: string) {
+  this.params.page = 1; 
+  this.params.status = status;
+  this.getCharacters();
 }
+
+}
+
 
 
